@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>undefined</title>
+  <meta name="generator" content="Google Web Designer 5.0.4.0226">
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    body {
+      background-color: transparent;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transform-style: preserve-3d;
+    }
+    .GameButton {
+      left: 20px;
+      top: 10px;
+    }
+    .CharButton {
+      left: 20px;
+      top: 10px;
+    }
+    .DiceButton {
+      left: 20px;
+      top: 10px;
+    }
+    .TopMenu {
+      width: 95%;
+      top: 20px;
+      left: 100px;
+      align: center;
+    }
+  </style>
+</head>
+<script type="text/javascript" src="game.js"></script>
+
+<body class="htmlNoPages">
+  <div class="TopMenu">
+    <button id="characters" class="GameButton" style="display:inline-block" onclick="toggleTab('MainGame','MainTabs')">Game Screen</button>
+    <button id="characters" class="CharButton" style="display:inline-block" onclick="toggleTab('CharData','MainTabs')">Characters</button>
+    <button id="characters" class="DiceButton" style="display:inline-block">Dice</button>
+  </div>
+  <div id="MainGame" class="MainTabs" style="display:inline-block">
+    <button id="ModeSolo" class="GameScreen" style="display:inline-block" onclick="toggleTab('Solo','Battle')">Solo</button>
+    <button id="ModeGroup" class="GameScreen" style="display:inline-block" onclick="toggleTab('Group','Battle')">Group</button>
+    <button id="ModeRaid" class="GameScreen" style="display:inline-block" onclick="toggleTab('Raid','Battle')">Raid</button>
+    <div id="Solo" class="Battle">
+      <table style="width: 1000px" border="0">
+      <tbody>
+        <tr>
+          <td>Trash</td>
+          <td>Trash</td>
+          <td>Trash</td>
+          <td>Trash</td>
+          <td>Trash</td>
+        </tr>
+        <tr>
+          <td><button name="Pull1-1">Pull</button><button name="Pull1-2">Pull</button><button name="Pull1-3">Pull</button></td>
+          <td><button name="Pull2-1">Pull</button><button name="Pull2-2">Pull</button><button name="Pull2-3">Pull</button></td>
+          <td><button name="Pull3-1">Pull</button><button name="Pull3-2">Pull</button><button name="Pull3-3">Pull</button></td>
+          <td><button name="Pull4-1">Pull</button><button name="Pull4-2">Pull</button><button name="Pull4-3">Pull</button></td>
+          <td><button name="Pull5-1">Pull</button><button name="Pull5-2">Pull</button><button name="Pull5-3">Pull</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="width: 1200px" border="0">
+      <tbody>
+        <tr>
+          <td style="width: 150px">Trash<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td style="width: 250px">Buffs<br>
+            Debuffs</td>
+          <td style="width: 150px">Trash<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td style="width: 250px">Buffs<br>
+            Debuffs</td>
+          <td style="width: 150px">Trash<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td style="width: 250px">Buffs<br>
+            Debuffs</td>
+        </tr>
+        <tr>
+          <td colspan="2"><br>
+          </td>
+          <td style="width: 150px">Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td style="width: 250px">Buffs<br>
+            Debuffs</td>
+          <td colspan="2"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div id="Group" class="Battle" style="display:none">
+      <table style="width: 1000px" border="0">
+      <tbody>
+        <tr>
+          <td>Trash</td>
+          <td>Trash</td>
+          <td>Trash</td>
+          <td>Trash</td>
+          <td>Trash</td>
+        </tr>
+        <tr>
+          <td><button name="Pull1-1">Pull</button><button name="Pull1-2">Pull</button><button name="Pull1-3">Pull</button></td>
+          <td><button name="Pull2-1">Pull</button><button name="Pull2-2">Pull</button><button name="Pull2-3">Pull</button></td>
+          <td><button name="Pull3-1">Pull</button><button name="Pull3-2">Pull</button><button name="Pull3-3">Pull</button></td>
+          <td><button name="Pull4-1">Pull</button><button name="Pull4-2">Pull</button><button name="Pull4-3">Pull</button></td>
+          <td><button name="Pull5-1">Pull</button><button name="Pull5-2">Pull</button><button name="Pull5-3">Pull</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="width: 1200px" border="1">
+  <tbody>
+    <tr>
+      <td style="width: 150px">Trash<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+      <td style="width: 150px">Trash<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+      <td style="width: 150px">Trash<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+    </tr>
+    <tr>
+      <td style="width: 150px">Trash<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+      <td style="width: 150px">Trash<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+      <td style="width: 150px">Trash<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+    </tr>
+    <tr>
+      <td style="width: 150px">Name - Class (LVL)<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+      <td style="width: 150px">Name - Class (LVL)<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+      <td style="width: 150px">Name - Class (LVL)<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+    </tr>
+    <tr>
+      <td style="width: 150px">Name - Class (LVL)<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+      <td style="width: 150px">Name - Class (LVL)<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+      <td style="width: 150px">Name - Class (LVL)<br>
+        HP/MHP<br>
+        Res/MRes</td>
+      <td style="width: 250px">Buffs<br>
+        Debuffs</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div id="Raid" class="Battle" style="display:none">
+      <table style="width: 100%;" border="0">
+      <tbody>
+        <tr>
+          <td>Sub Boss</td>
+          <td><br>
+          </td>
+          <td>Sub Boss</td>
+          <td><br>
+          </td>
+          <td>Boss</td>
+          <td><br>
+          </td>
+          <td>Sub Boss</td>
+          <td><br>
+          </td>
+          <td>Sub Boss</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+          <td>Trash</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+        </tr>
+        <tr>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+        </tr>
+        <tr>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+        </tr>
+        <tr>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+          <td>Name - Class (LVL)<br>
+            HP/MHP<br>
+            Res/MRes</td>
+          <td>Buffs<br>
+            Debuffs</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="CharScreen">
+    <input type="text" onchange="Char.UpdateName(game.CurrentChar)" id="CharName">
+  </div>
+
+</body>
+
+</html>
